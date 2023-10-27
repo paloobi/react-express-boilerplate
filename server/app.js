@@ -10,13 +10,15 @@ app.use(morgan("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+app.use(express.static(path.join(__dirname, "../public")));
+
 app.get("/", (req, res, next) => {
-    try {
-        res.send("Hello Express App");
-    } catch (error) {
-        next(error);
-    }
-})
+  try {
+    res.send("index.html");
+  } catch (error) {
+    next(error);
+  }
+});
 
 // Error handling middleware
 app.use((err, req, res, next) => {
