@@ -6,6 +6,10 @@ And the associated repository: https://github.com/f-bergener/typescript-react-ex
 
 However, this version uses JavaScript instead of TypeScript.
 
+In addition, this project includes:
+* jest setup
+* Prisma client mocked
+
 ## Start the App
 
 In development:
